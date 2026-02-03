@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximun-scale=1.0, user-scalable=0">
+    <title>flappy bird</title>
+</head>
+<body>
+    
+<canvas id="canvas" width="800px" height="500px"></canvas>
+
+    <script>
+        let canvas = document.getElementById('canvas')
+        let ctx = canvas.getContext('2d')
+
+        let birdSprite = new Image()
+        birdSprite.src = 'assets/flappy_bird_sprites.png'
+
+        birdSprite.addEventListener('load', () =>{
+            ctx.drawImage(birdSprite, 0, 480, 50, 50, 20, 20, 400, 400)
+        })
+    </script>
+</body>
+</html>
