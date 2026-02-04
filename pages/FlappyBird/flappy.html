@@ -16,8 +16,16 @@
         let birdSprite = new Image()
         birdSprite.src = 'assets/flappy_bird_sprites.png'
 
+        let numBirdSprite = 0
+        let tamBirdSprite = 28
+        let posXBirdSprite = numBirdSprite * tamBirdSprite
+
+        setTimeout(() => {
+            numBirdSprite++
+        }, 200);
+
         birdSprite.addEventListener('load', () =>{
-            ctx.drawImage(birdSprite, 0, 480, 50, 50, 20, 20, 400, 400)
+            ctx.drawImage(birdSprite, posXBirdSprite, 490, 20, 20, 10, 20, 70, 70)
         })
     </script>
 </body>
